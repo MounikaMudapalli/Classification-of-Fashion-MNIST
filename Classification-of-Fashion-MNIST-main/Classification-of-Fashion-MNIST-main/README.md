@@ -1,69 +1,38 @@
-# Fashion MNIST Image Classification using CNN
+Fashion MNIST Image Classification (CNN)
 
-This project demonstrates how to build and train a Convolutional Neural Network (CNN) to classify images from the Fashion MNIST dataset. The Fashion MNIST dataset consists of 70,000 grayscale images, each 28x28 pixels, depicting 10 categories of clothing and accessories. This project uses deep learning techniques to accurately classify these images into their respective categories.
+This project builds a simple Convolutional Neural Network (CNN) to classify images from the Fashion MNIST dataset. The dataset contains 28×28 grayscale images of 10 types of clothing and accessories.
 
-## Table of Contents
-- [Project Overview](#project-overview)
-- [Dataset](#dataset)
-- [Model Architecture](#model-architecture)
-- [Installation](#installation)
-- [Results](#results)
+Overview:
+The goal is to train a CNN that can correctly identify fashion items such as shirts, shoes, bags, and more.
 
-## Project Overview
-The goal of this project is to build a robust image classification model using a CNN to predict the category of a fashion item based on the image provided. The model is trained and tested on the Fashion MNIST dataset, which contains images of items such as t-shirts, trousers, dresses, and shoes.
+Dataset Details:
+Total images: 70,000
+Training: 60,000
+Testing: 10,000
+Image size: 28×28 (grayscale)
 
-### Categories in the Dataset
-The dataset contains 10 classes:
-1. T-shirt/top
-2. Trouser
-3. Pullover
-4. Dress
-5. Coat
-6. Sandal
-7. Shirt
-8. Sneaker
-9. Bag
-10. Ankle boot
+Classes (10): T-shirt/top, Trouser, Pullover, Dress, Coat, Sandal, Shirt, Sneaker, Bag, Ankle boot
 
-## Dataset
-The Fashion MNIST dataset contains images of various fashion items.
+Model Summary
 
-- **Training set**: 60,000 images
-- **Test set**: 10,000 images
-- **Image size**: 28x28 pixels
-- **Channels**: 1 (grayscale)
+The CNN includes:
 
-You can download the Fashion MNIST dataset directly via TensorFlow or Keras using:
+Convolutional layers (ReLU activation)
 
-```python
-from tensorflow.keras.datasets import fashion_mnist
-```
+MaxPooling layers
 
-### Model Architecture
-The model is a Convolutional Neural Network (CNN) designed to classify the fashion images into one of 10 classes. The architecture includes:
-- **Input layer**: 28x28 grayscale images (1 channel)
-- **Conv2D layer**: Extracts features from the image (several convolutional layers with ReLU activation)
-- **MaxPooling layer**: Reduces the spatial dimensions of the feature maps
-- **Fully connected (Dense) layers**: Maps the extracted features to class probabilities
-- **Softmax layer**: Outputs the probability distribution over the 10 classes
+Dense layers
 
-## Installation
+Final softmax layer for 10-class prediction
 
-Follow these steps to set up the project environment:
+Installation
 
-1. **Check Python Version**  
-   Ensure you have Python 3.x installed by running the following command:
+Check Python version:
 
-   ```bash
-   python --version
-   ```
-2. **Install Dependencies**
-After creating and activating the virtual environment (or in your existing environment), install the required packages using requirements.txt:
-```bash
+python --version
+
+
+
+Install dependencies:
+
 pip install -r requirements.txt
-```
-### Results
-After training the model, you should expect to achieve an accuracy of around 90% on the test dataset. The following metrics can be used to evaluate the model performance:
-
-**Accuracy**: ~90%
-**Loss**: < 0.22
